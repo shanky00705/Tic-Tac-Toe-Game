@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tic-Tac-Toe — Clean UI & UX</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <div class="card">
+    <header>
+      <h1>Tic-Tac-Toe</h1>
+      <div id="status">Player X's turn</div>
+    </header>
+
+    <div class="scoreboard">
+      <div class="score-pill x-pill">X Wins: <span id="xWins">0</span></div>
+      <div class="score-pill ties-pill">Ties: <span id="ties">0</span></div>
+      <div class="score-pill o-pill">O Wins: <span id="oWins">0</span></div>
+    </div>
+
+    <div class="board" id="board">
+      <div class="cell" data-index="0"></div>
+      <div class="cell" data-index="1"></div>
+      <div class="cell" data-index="2"></div>
+      <div class="cell" data-index="3"></div>
+      <div class="cell" data-index="4"></div>
+      <div class="cell" data-index="5"></div>
+      <div class="cell" data-index="6"></div>
+      <div class="cell" data-index="7"></div>
+      <div class="cell" data-index="8"></div>
+      <div class="win-line" id="winLine"></div>
+    </div>
+
+    <div class="controls">
+      <button class="btn" id="resetBtn">Reset Board</button>
+      <button class="btn" id="resetScoresBtn">Reset Scores</button>
+    </div>
+  </div>
+
+  <div id="winnerOverlay">
+    <div class="winner-box">
+      <div class="winner-text" id="winnerText">Player X Wins!</div>
+      <div class="winner-sub">Click anywhere to continue</div>
+      <button class="btn" id="overlayPlayAgain">Play Again</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

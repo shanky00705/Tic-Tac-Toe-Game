@@ -1,0 +1,119 @@
+body {
+  font-family: Inter, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #0f172a, #4c1d95);
+  color: #fff;
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 12px;
+  width: 340px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+#status {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: space-between;
+  margin: 12px 0;
+}
+
+.score-pill {
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.x-pill { background: rgba(255, 75, 71, 0.2); color: #ff4b47; }
+.o-pill { background: rgba(71, 227, 255, 0.2); color: #47e3ff; }
+.ties-pill { background: rgba(255, 204, 112, 0.2); color: #ffcc70; }
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin: 15px 0;
+}
+
+.cell {
+  background: rgba(255,255,255,0.1);
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.cell:hover { transform: scale(1.05); }
+.cell.x { color: #ff4b47; }
+.cell.o { color: #47e3ff; }
+
+.controls {
+  margin-top: 10px;
+}
+
+.btn {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+#winnerOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+#winnerOverlay.visible { display: flex; }
+
+.winner-box {
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.winner-text { font-size: 20px; font-weight: bold; }
+.winner-sub { font-size: 14px; margin: 8px 0; opacity: 0.8; }
+
+.win-line {
+  position: absolute;
+  height: 6px;
+  background: linear-gradient(90deg, #ff4b47, #47e3ff);
+  opacity: 0;
+}
